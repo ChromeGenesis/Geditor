@@ -21,12 +21,10 @@ def new_file(event=None):
     if file_name:
         if tkinter.messagebox.askokcancel("Open New File", "You're about to open a new file make sure you saved your work"):
             root.title('{} - {}'.format('Untitled', title))
-            global file_name
             file_name = None
             context_text.delete(1.0, END)
     else:        
         root.title('{} - {}'.format('Untitled', title))
-        global file_name
         file_name = None
         context_text.delete(1.0, END)
 def open_file(event=None):
